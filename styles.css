@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+}
+
+.house {
+  z-index: 5;
+}
+
+.ghost {
+  z-index: 3;
+}
