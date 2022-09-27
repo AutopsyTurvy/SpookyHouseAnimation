@@ -11,8 +11,16 @@ h1 {
 section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   padding: 100px;
+}
+
+.spoopy {
+  color: white;
+  z-index: 2000;
+}
+
+.hauntedHouse {
 }
 
 section img {
@@ -28,12 +36,11 @@ section img#ghost {
   animation: float 2s linear infinite;
 }
 
-section fog::before {
-  content: "";
-  position: absolute;
+.fadeout {
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 50em;
   background: linear-gradient(to top, black, transparent);
 }
 
