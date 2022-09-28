@@ -8,10 +8,25 @@ h1 {
   color: white;
 }
 
+.rain {
+  height: 100vh;
+  background-image: url(rain.png);
+  animation: rain 0.3s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
 section {
   position: relative;
   width: 100%;
-  height: 110vh;
+  height: 115vh;
   padding: 100px;
 }
 
@@ -21,6 +36,7 @@ section {
 }
 
 .hauntedHouse {
+  background: linear-gradient(to top, black, transparent);
 }
 
 section img {
@@ -40,7 +56,7 @@ section img#ghost {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 50em;
+  height: 40em;
   background: linear-gradient(to top, black, transparent);
 }
 
