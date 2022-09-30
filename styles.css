@@ -50,8 +50,11 @@ section img#rain::before {
   animation: lightning 3s linear infinite;
 }
 
-section img#rain {
-  height: 100vh;
+section div#rain {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url(Images/rain.png);
   animation: rain 0.3s linear infinite;
 }
 
