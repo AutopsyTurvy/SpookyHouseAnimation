@@ -2,14 +2,14 @@ body {
   background-color: black;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 section {
   position: relative;
   width: 100%;
-  height: 110vh;
-  padding: 100px;
+  height: 100vh;
   padding-left: 0%;
   padding-right: 0%;
   padding-bottom: 0%;
@@ -49,6 +49,7 @@ section div#rain {
   width: 100%;
   object-fit: cover;
   position: absolute;
+  overflow: hidden;
   background-image: url(Images/rain.png);
   animation: rain 0.4s linear infinite;
 }
