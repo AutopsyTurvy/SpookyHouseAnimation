@@ -7,7 +7,7 @@ body {
 }
 
 section {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100vh;
   padding-left: 0%;
@@ -18,12 +18,9 @@ section {
 .fadeout {
   position: relative;
   width: 100%;
-  height: 60em;
+  height: 56em;
+  bottom: 0;
   background: linear-gradient(to top, black, transparent);
-}
-
-.spoopy {
-  color: white;
 }
 
 section img {
@@ -33,15 +30,6 @@ section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-section img#hauntedHouse section div#rain::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(lightningBright.png);
-  animation: lightning 3s linear infinite;
 }
 
 section div#rain {
@@ -54,12 +42,55 @@ section div#rain {
   animation: rain 0.4s linear infinite;
 }
 
+section div#rain::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(Images/lightningBright.png);
+  animation: lightning 0.4s linear infinite;
+  opacity: 0;
+}
+
 @keyframes rain {
   0% {
     background-position: 0% 0%;
   }
   100% {
     background-position: 20% 100%;
+  }
+}
+
+@keyframes lightning {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  11% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  21% {
+    opacity: 2;
+  }
+  23% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 0;
+  }
+  104% {
+    opacity: 0;
   }
 }
 
