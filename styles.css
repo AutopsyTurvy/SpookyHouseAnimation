@@ -18,7 +18,7 @@ section {
 .fadeout {
   position: relative;
   width: 100%;
-  height: 56em;
+  height: 60em;
   bottom: 0;
   background: linear-gradient(to top, black, transparent);
 }
@@ -42,14 +42,17 @@ section div#rain {
   animation: rain 0.4s linear infinite;
 }
 
+img#lightning {
+  animation: lightning 0.9s linear infinite;
+}
+
 section div#rain::before {
   content: "";
   position: absolute;
+  height: 100vh;
   width: 100%;
-  height: 100%;
-  background-image: url(Images/lightningBright.png);
-  animation: lightning 0.4s linear infinite;
-  opacity: 0;
+  margin: 0 auto;
+  background-image: url();
 }
 
 @keyframes rain {
@@ -57,7 +60,7 @@ section div#rain::before {
     background-position: 0% 0%;
   }
   100% {
-    background-position: 20% 100%;
+    background-position: 50% 100%;
   }
 }
 
@@ -66,7 +69,7 @@ section div#rain::before {
     opacity: 0;
   }
   10% {
-    opacity: 1;
+    opacity: 0;
   }
   11% {
     opacity: 0;
@@ -81,10 +84,16 @@ section div#rain::before {
     opacity: 2;
   }
   23% {
-    opacity: 0;
+    opacity: 1;
   }
   24% {
     opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  31% {
+    opacity: 1;
   }
   14% {
     opacity: 0;
