@@ -1,64 +1,43 @@
 body {
   background-color: black;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-section {
+.fadeout {
   position: absolute;
   width: 100%;
-  height: 100vh;
-  padding-left: 0%;
-  padding-right: 0%;
-  padding-bottom: 0%;
-}
-
-.fadeout {
-  position: relative;
-  width: 100%;
-  height: 56em;
-  bottom: 0;
+  height: 100%;
   background: linear-gradient(to top, black, transparent);
 }
 
-section img {
+img {
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div#rain {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-section div#rain {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-  overflow: hidden;
+  overflow: clip;
   background-image: url(Images/rain.png);
   animation: rain 0.4s linear infinite;
 }
 
-section div#rain::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(Images/lightningBright.png);
-  animation: lightning 0.4s linear infinite;
-  opacity: 0;
-}
-
 @keyframes rain {
   0% {
-    background-position: 0% 0%;
+    background-position: 0;
   }
   100% {
     background-position: 20% 100%;
   }
+}
+
+img#lightning {
+  animation: lightning 2s linear infinite;
 }
 
 @keyframes lightning {
@@ -68,37 +47,25 @@ section div#rain::before {
   10% {
     opacity: 1;
   }
-  11% {
-    opacity: 0;
-  }
-  14% {
+  12% {
     opacity: 0;
   }
   20% {
+    opacity: 1;
+  }
+  22% {
     opacity: 0;
   }
-  21% {
-    opacity: 2;
-  }
-  23% {
-    opacity: 0;
-  }
-  24% {
-    opacity: 0;
-  }
-  14% {
-    opacity: 0;
-  }
-  104% {
+  100% {
     opacity: 0;
   }
 }
 
-section img#ghost {
-  animation: float 2s linear infinite;
+img#ghost {
+  animation: ghost 2s ease infinite;
 }
 
-@keyframes float {
+@keyframes ghost {
   100% {
     transform: translateY(-7px);
   }
