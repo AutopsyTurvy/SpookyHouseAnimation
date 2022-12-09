@@ -38,7 +38,6 @@ div#rain {
 }
 
 
-
 @keyframes rain {
   0% {
     background-position: 0;
